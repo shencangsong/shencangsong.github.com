@@ -8,7 +8,7 @@ a:active,a:hover,a:link{text-decoration:none;}
 ul,li{list-style-type:none;}
 .container .main .product_box{font:28px bold;}
 .container .main .productList{border-top:1px solid #e5e5e5;padding-top:15px;}
-.container .main .productList ul li{ float:left;width:33%; position:relative; text-align:center;}
-.container .main .productList ul li img{width:97%;}
+.container .main .productList ul li{ float:left;width:33%; position:relative;}
+.container .main .productList ul li img{width:97%; margin:0 auto;}
 .container .main .productList ul li .price{color:#F00;font-size:14px; margin-right:5px;}
 .container .main .productList ul li .you{background:url(../images/you.gif) no-repeat; display:inline-block; width:27px; height:15px;}
