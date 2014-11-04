@@ -8,6 +8,6 @@ a:active,a:hover,a:link{text-decoration:none;}
 ul,li{list-style-type:none;}
 
 .container .main .productList ul li{ float:left;width:32%; margin-bottom:3px; padding:2px;}
-.container .main .productList ul li img{width:100%;height:100%;}
+.container .main .productList ul li img{width:100%;}
 .container .main .productList ul li .price{color:#F00;font-size:14px; margin-right:5px;}
 .container .main .productList ul li .you{background:url(../images/you.gif) no-repeat; display:inline-block; width:27px; height:15px;}
