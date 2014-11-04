@@ -1,2 +1,6 @@
 html,body{ font-family:"Î¢ÈíÑÅºÚ",Tahoma,Verdana,Arial; font-size:12px; width:100%; height:100%; margin:0; padding:0;}
 .container{ max-width:640px;min-width:320px;background:#f00; margin:0 auto;}
+.container .header{ background:#eee; border:1px solid #ddd; height:31px;}
+.container .header span.title{ background:url(../images/home.png) no-repeat left center ; padding-left:20px; font-size:14px ;font-weight:bold;}
+.container .footer{ background:#eee; border:1px solid #ddd; height:40px; text-align:center;}
+a:active,a:hover,a:link{text-decoration:none;}
