@@ -29,7 +29,7 @@
 		        <p>The last one</p>
 		      </div>
 		    </div>
-		    <img src="images/music.png" class="music" id="btn_music"/>
+		    <img src="images/music_off.png" class="music" flag="off" id="btn_music"/>
 		    <img src="images/up.png" class="btn_up" id="btn_up" />
 		</div>
 		<div style="display:block">
@@ -64,11 +64,21 @@
 	  		mySwiper.swipeNext();
 	  	});
 
-		
+		var audio = document.getElementById("bgmusic");
 	  	$("#btn_music").click(function(){ 
-	  		var audio = document.getElementById("bgmusic");
+	  		var flag = $(this).attr('flag');
 	  		audio.src = "music.mp3";
-	  		audio.play();
+	  		if(flag == 'off'){ 
+				audio.play();
+				$(this).attr('src','images/music_on.png');
+				$(this).attr('flag','on');
+			}else{ 
+				$(this).attr('flag','off');
+				$(this).attr('src','images/music_off.png');
+				audio.pause();
+
+			}
+	  		
 	  	});
 	});
 	  </script>
