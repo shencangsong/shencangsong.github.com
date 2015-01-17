@@ -29,3 +29,8 @@ html,body {
 .pink-slide {
   background: #973e76;
 }
+
+#one .title{ 
+	margin-top: 5%;
+	font-size: 20px;
+}
