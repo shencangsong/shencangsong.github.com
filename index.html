@@ -18,7 +18,7 @@
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 		      <div class="swiper-slide blue-slide" id="one">
-		        <div data-animated="fadeInDownBig" class="animated fadeInDownBig title">至青春之——婚礼</div>
+		        <div data-animated="fadeInDownBig" class="animated title">至青春之——婚礼</div>
 		      </div>
 		      <div class="swiper-slide red-slide">
 		        <div class="title">Slide 2</div>
@@ -32,10 +32,28 @@
 		</div>
 	</body>
 	<script>
-	  var mySwiper = new Swiper('.swiper-container',{
+	$(function(){ 
+		var mySwiper = new Swiper('.swiper-container',{
 	    //pagination: '.pagination',
 	    //paginationClickable: true,
-	    mode: 'vertical'
+		mode: 'vertical',
+		initialSlide:0,
+		grabCursor: true,
+		autoResize:false,
+		noSwiping:true,
+		simulateTouch:true,
+		onFirstInit:function(swiper){
+			$("#one .title").show().addClass($(".animated").data("animated")); 
+		},
+	    onSlideChangeEnd:function(swiper){
+	    	console.log(swiper.activeIndex);
+	        if(swiper.activeIndex == 0){
+	          $("#one .title").show().addClass($(".animated").data("animated"));
+	        }else{ 
+	        	$(".animated").hide().removeClass($(".animated").data("animated"));
+	        }
+	    }
 	  })
+	});
 	  </script>
 </html>
