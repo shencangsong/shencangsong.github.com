@@ -29,6 +29,11 @@
 		        <p>The last one</p>
 		      </div>
 		    </div>
+		    <img src="images/music.png" class="music" id="btn_music"/>
+		    <img src="images/up.png" class="btn_up" id="btn_up" />
+		</div>
+		<div style="display:block">
+			<audio src="music.mp3" id="bgmusic"></audio>
 		</div>
 	</body>
 	<script>
@@ -36,24 +41,35 @@
 		var mySwiper = new Swiper('.swiper-container',{
 	    //pagination: '.pagination',
 	    //paginationClickable: true,
-		mode: 'vertical',
-		initialSlide:0,
-		grabCursor: true,
-		autoResize:false,
-		noSwiping:true,
-		simulateTouch:true,
-		onFirstInit:function(swiper){
-			$("#one .title").show().addClass($(".animated").data("animated")); 
-		},
-	    onSlideChangeEnd:function(swiper){
-	    	console.log(swiper.activeIndex);
-	        if(swiper.activeIndex == 0){
-	          $("#one .title").show().addClass($(".animated").data("animated"));
-	        }else{ 
-	        	$(".animated").hide().removeClass($(".animated").data("animated"));
-	        }
-	    }
-	  })
+			mode: 'vertical',
+			initialSlide:0,
+			grabCursor: true,
+			autoResize:false,
+			noSwiping:true,
+			simulateTouch:true,
+			onFirstInit:function(swiper){
+				$("#one .title").show().addClass($(".animated").data("animated")); 
+			},
+		    onSlideChangeEnd:function(swiper){
+		    	console.log(swiper.activeIndex);
+		        if(swiper.activeIndex == 0){
+		          $("#one .title").show().addClass($(".animated").data("animated"));
+		        }else{ 
+		        	$(".animated").hide().removeClass($(".animated").data("animated"));
+		        }
+		    }
+	  	})
+
+	  	$('#btn_up').click(function(){ 
+	  		mySwiper.swipeNext();
+	  	});
+
+		
+	  	$("#btn_music").click(function(){ 
+	  		var audio = document.getElementById("bgmusic");
+	  		audio.src = "music.mp3";
+	  		audio.play();
+	  	});
 	});
 	  </script>
 </html>
